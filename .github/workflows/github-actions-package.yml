@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 14.18.x
       - run: npm install node-gyp@8.3.0
-      - run: npm ci
+      - run: npm ci --registry=https://mirrors.huaweicloud.com/repository/npm/
       # 根据实际情况，进行打包，没有linux版本的时候，不需要打包
       - run: npm run package
       - run: npm run cross-package-win
